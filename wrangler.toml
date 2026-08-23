@@ -1,0 +1,20 @@
+name = "health-jobs-portal"
+main = "worker.js"
+compatibility_date = "2026-08-23"
+
+# آپ کا موجودہ *.workers.dev URL ہی چلتا رہے گا
+workers_dev = true
+
+# Dashboard میں مینول سیٹ کیے گئے env vars/secrets deploy پر reset نہیں ہوں گے
+keep_vars = true
+
+[[d1_databases]]
+binding = "ADS_DB"
+database_name = "healthjoarkiting"
+database_id = "9b24dc43-65da-4ef7-99cb-6562e269c5df"
+
+[[r2_buckets]]
+binding = "AD_SCREENSHOTS"
+bucket_name = "t21"
+
+# EMAIL_SECRET یہاں نہیں — وہ dashboard کے "Secrets" میں پہلے سے محفوظ ہے
